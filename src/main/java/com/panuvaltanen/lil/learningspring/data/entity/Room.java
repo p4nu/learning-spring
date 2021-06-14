@@ -8,37 +8,37 @@ public class Room {
     @Id
     @Column(name = "ROOM_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long roomId;
+    private long id;
 
-    @Column(name = "NAME")
-    private String roomName;
+    @Column(name = "NAME", length = 16, nullable = false)
+    private String name;
 
-    @Column(name = "ROOM_NUMBER")
-    private String roomNumber;
+    @Column(name = "ROOM_NUMBER", length = 2, nullable = false, unique = true)
+    private String number;
 
-    @Column(name = "BED_INFO")
+    @Column(name = "BED_INFO", length = 2, nullable = false)
     private String bedInfo;
 
-    public long getRoomId() { return roomId; }
+    public long getId() { return id; }
 
-    public void setRoomId(long roomId) {
-        this.roomId = roomId;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getRoomName() {
-        return roomName;
+    public String getName() {
+        return name;
     }
 
-    public void setRoomName(String roomName) {
-        this.roomName = roomName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getRoomNumber() {
-        return roomNumber;
+    public String getNumber() {
+        return number;
     }
 
-    public void setRoomNumber(String roomNumber) {
-        this.roomNumber = roomNumber;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     public String getBedInfo() {
