@@ -1,7 +1,6 @@
 package com.panuvaltanen.lil.learningspring.data.entity;
 
 import javax.persistence.*;
-import java.math.BigInteger;
 import java.util.Date;
 
 @Entity
@@ -12,10 +11,10 @@ public class Reservation {
     private long id;
 
     @Column(name = "ROOM_ID", nullable = false)
-    private BigInteger roomId;
+    private long roomId;
 
     @Column(name = "GUEST_ID", nullable = false)
-    private BigInteger guestId;
+    private long guestId;
 
     @Column(name = "RES_DATE")
     private Date reservationDate;
@@ -28,19 +27,19 @@ public class Reservation {
         this.id = id;
     }
 
-    public BigInteger getRoomId() {
+    public long getRoomId() {
         return roomId;
     }
 
-    public void setRoomId(BigInteger roomId) {
+    public void setRoomId(long roomId) {
         this.roomId = roomId;
     }
 
-    public BigInteger getGuestId() {
+    public long getGuestId() {
         return guestId;
     }
 
-    public void setGuestId(BigInteger guestId) {
+    public void setGuestId(long guestId) {
         this.guestId = guestId;
     }
 
